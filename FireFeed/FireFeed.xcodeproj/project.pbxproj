@@ -11,6 +11,11 @@
 		6812555E22BBCDBD0069F656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6812555D22BBCDBD0069F656 /* Assets.xcassets */; };
 		6812556122BBCDBD0069F656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6812555F22BBCDBD0069F656 /* LaunchScreen.storyboard */; };
 		6812556B22BBD41C0069F656 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6812556A22BBD41C0069F656 /* GoogleService-Info.plist */; };
+		681523A422C7C715009AB92F /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681523A322C7C715009AB92F /* FeedItem.swift */; };
+		681523A722C7C9A1009AB92F /* FirestoreDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681523A622C7C9A1009AB92F /* FirestoreDatasource.swift */; };
+		681523AA22C7CB8D009AB92F /* FFFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681523A922C7CB8D009AB92F /* FFFirebaseService.swift */; };
+		681523AC22C7D543009AB92F /* FFCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681523AB22C7D543009AB92F /* FFCollectionReference.swift */; };
+		681523AF22C7E715009AB92F /* DocumentSnapshot+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681523AE22C7E715009AB92F /* DocumentSnapshot+Extension.swift */; };
 		6830A5B022C65B8800C62108 /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830A5AF22C65B8800C62108 /* FeedListViewController.swift */; };
 		6830A5B222C65B9800C62108 /* FeedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830A5B122C65B9800C62108 /* FeedListViewModel.swift */; };
 		6830A5B622C65BD100C62108 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830A5B522C65BD100C62108 /* FeedTableViewCell.swift */; };
@@ -25,6 +30,11 @@
 		6812556022BBCDBD0069F656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6812556222BBCDBD0069F656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6812556A22BBD41C0069F656 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		681523A322C7C715009AB92F /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		681523A622C7C9A1009AB92F /* FirestoreDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDatasource.swift; sourceTree = "<group>"; };
+		681523A922C7CB8D009AB92F /* FFFirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFFirebaseService.swift; sourceTree = "<group>"; };
+		681523AB22C7D543009AB92F /* FFCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFCollectionReference.swift; sourceTree = "<group>"; };
+		681523AE22C7E715009AB92F /* DocumentSnapshot+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentSnapshot+Extension.swift"; sourceTree = "<group>"; };
 		6830A5AF22C65B8800C62108 /* FeedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
 		6830A5B122C65B9800C62108 /* FeedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewModel.swift; sourceTree = "<group>"; };
 		6830A5B522C65BD100C62108 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -74,6 +84,10 @@
 		6812555522BBCDBB0069F656 /* FireFeed */ = {
 			isa = PBXGroup;
 			children = (
+				681523AD22C7E2AD009AB92F /* Extensions */,
+				681523A822C7CB25009AB92F /* Services */,
+				681523A522C7C93F009AB92F /* Datasource */,
+				681523A222C7C6FC009AB92F /* Model */,
 				6830A5B322C65B9C00C62108 /* FeedCell */,
 				6830A5AE22C65B6D00C62108 /* FeedList */,
 				6812556A22BBD41C0069F656 /* GoogleService-Info.plist */,
@@ -83,6 +97,39 @@
 				6812556222BBCDBD0069F656 /* Info.plist */,
 			);
 			path = FireFeed;
+			sourceTree = "<group>";
+		};
+		681523A222C7C6FC009AB92F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				681523A322C7C715009AB92F /* FeedItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		681523A522C7C93F009AB92F /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				681523A622C7C9A1009AB92F /* FirestoreDatasource.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		681523A822C7CB25009AB92F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				681523A922C7CB8D009AB92F /* FFFirebaseService.swift */,
+				681523AB22C7D543009AB92F /* FFCollectionReference.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		681523AD22C7E2AD009AB92F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				681523AE22C7E715009AB92F /* DocumentSnapshot+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		6830A5AE22C65B6D00C62108 /* FeedList */ = {
@@ -225,9 +272,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681523AA22C7CB8D009AB92F /* FFFirebaseService.swift in Sources */,
 				6830A5B022C65B8800C62108 /* FeedListViewController.swift in Sources */,
+				681523AF22C7E715009AB92F /* DocumentSnapshot+Extension.swift in Sources */,
 				6830A5B222C65B9800C62108 /* FeedListViewModel.swift in Sources */,
 				6812555722BBCDBB0069F656 /* AppDelegate.swift in Sources */,
+				681523A422C7C715009AB92F /* FeedItem.swift in Sources */,
+				681523AC22C7D543009AB92F /* FFCollectionReference.swift in Sources */,
+				681523A722C7C9A1009AB92F /* FirestoreDatasource.swift in Sources */,
 				6830A5B622C65BD100C62108 /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

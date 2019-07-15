@@ -21,13 +21,15 @@ class FeedListViewModel: NSObject {
         }
     }
     
-    var feedList: [String] = []
-    var onFeedItemSelectionEvent: ((String)->Void)?
+    var feedList: [FeedItem] = []
+    var onFeedItemSelectionEvent: ((FeedItem)->Void)?
     
     func fetchData() {
         
-        feedList = ["Table", "View", "Example", "Values", "Just", "For", "Testing"]
-        loadViews()
+        FFFirebaseService.shared.read(from: .feed, returning: FeedItem.self) { [weak self] items in
+            self?.feedList = items
+            self?.loadViews()
+        }
     }
     
     func loadViews() {
@@ -50,9 +52,9 @@ extension FeedListViewModel: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
-        let string = feedList[indexPath.row]
+        let feedItem = feedList[indexPath.row]
         
-        cell.populate(with: string)
+        cell.populate(with: feedItem)
         
         return cell
     }

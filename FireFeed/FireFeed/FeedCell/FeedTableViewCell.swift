@@ -33,8 +33,8 @@ class FeedTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func populate(with label: String) {
-        feedLabel.text = label
+    func populate(with item: FeedItem) {
+        feedLabel.text = item.title
     }
     
 }
